@@ -34,8 +34,14 @@ body {
   margin: 0;
 }
 
+.content {
+  width: 80%;
+  margin: 0px auto;
+}
+
 section {
   background-color: $navy;
+  overflow-x: hidden;
 }
 
 @mixin button {
@@ -119,12 +125,10 @@ section {
 }
 
 .heroSection {
-  height: 100vh;
+  height: 103vh;
   position: relative;
   .textGrid {
-    position: absolute;
-    top: 30%;
-    left: 15%;
+    margin-top: 20%;
 
     .geet {
       margin-bottom: 20px;
@@ -175,4 +179,103 @@ section {
       }
     }
   }
+
+  .fixedIcons {
+    position: fixed;
+    top: 65%;
+    left: 85%;
+    z-index: 10;
+
+    .iconLink {
+      color: $sight-slate;
+      margin-bottom: 5px;
+      &:hover {
+        color: $green;
+        transform: translateY(-3px);
+      }
+    }
+
+    &::after {
+      margin-top: 10px;
+      content: ' ';
+      display: block;
+      width: 1px;
+      height: 130px;
+      margin-left: 20px;
+      background-color: $sight-slate;
+    }
+  }
 }
+
+// Common section
+.titleContainer {
+  margin-bottom: 40px;
+  .number {
+    color: $green;
+    font-family: 'roboto-700';
+    font-size: 28px;
+  }
+  .title {
+    color: $lightest-slate;
+    font-family: 'roboto-700';
+    font-size: 28px;
+  }
+  .titleLine {
+    content: ' ';
+    display: block;
+    width: 500px;
+    height: 1px;
+    margin: 18px 0px 0px 20px;
+    background-color: $sight-slate;
+  }
+}
+// end of common section
+
+// About section
+.aboutSection {
+  // .imageGrid {
+  //   position: relative;
+
+  .imageBorder {
+    width: 300px;
+    height: 300px;
+    border: 2px solid $green;
+    border-radius: 5%;
+    margin-left: 50px;
+  }
+  .imageContainer {
+    width: 300px;
+    height: 300px;
+    border-radius: 5%;
+    background-color: $green;
+    margin: -15px 0px 0px -15px;
+
+    .image {
+      width: 300px;
+      height: 300px;
+      border-radius: 5%;
+      mix-blend-mode: multiply;
+      filter: grayscale(100%) contrast(1);
+      &:hover {
+        mix-blend-mode: normal;
+        fill: none;
+      }
+    }
+  }
+}
+
+// end of about section
+
+// Experience section
+.experienceSection {
+  height: 100vh;
+}
+
+// end of Experience section
+
+// project section
+.projectSection {
+  height: 100vh;
+}
+
+// end of project section

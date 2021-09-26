@@ -12,7 +12,7 @@ function HideOnScroll(props: Props) {
   const { children, window } = props;
   const elevateTrigger = useScrollTrigger({
     disableHysteresis: true,
-    threshold: 100,
+    threshold: 150,
     target: window ? window() : undefined,
   });
 
